@@ -32,8 +32,8 @@ public class UserService {
         this.repository.save(user);
     }
 
-    public ResponseEntity<List<User>> getAllUsers() {
-        return (ResponseEntity<List<User>>) this.repository.findAll();
+    public List<User> getAllUsers() {
+        return this.repository.findAll();
     }
 
     public User createUser(UserDTO data) {
